@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
-<title>Registro de Usuarios Nuevos</title>
+<title>Editar Usuarios</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -28,7 +28,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#" th:href="@{/}">Registro de Usuarios Nuevos</a>
+				<a class="navbar-brand" href="#" th:href="@{/}">Edicion de Usuarios</a>
 			</div>
 		</div>
 	</nav>
@@ -44,7 +44,7 @@
 				</div>
 
 				<h1>Regístrate</h1>
-				<form th:action="@{/registro}" method="post" th:object="${usuario}">
+				<form th:action="@{/editar_usuario/{id}(id=${usuario.id})}" method="post" th:object="${usuario}">
 					<div class="form-group">
 						<label class="control-label" for="nombre">Nombre : </label> <input
 							id="nombre" type="text" class="form-control" placeholder="Digite su nombre: " th:field="*{nombre}"

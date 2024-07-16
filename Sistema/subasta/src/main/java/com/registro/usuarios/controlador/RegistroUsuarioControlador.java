@@ -41,12 +41,12 @@ public class RegistroUsuarioControlador {
 		return "redirect:/registro?exito";
 	}
 
-	@GetMapping("/editar/{id}")
+	@GetMapping("/editar_usuario/editar/{id}")
     public String showEditForm(@PathVariable Long id, Model model) {
         Optional<Usuario> usuario = usuarioServicio.findById(id);
         if (usuario.isPresent()) {
             model.addAttribute("usuario", usuario.get());
-            return "editar-usuario";
+            return "editar_usuario";
         } else {
             return "redirect:/usuario";
         }

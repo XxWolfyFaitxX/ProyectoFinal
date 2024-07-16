@@ -44,6 +44,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		.antMatchers(
 				"/registro**",
 				"/perfil**",
+				"/editar_usuario**",
 				"/js/**",
 				"/**",
 				"/index/**",

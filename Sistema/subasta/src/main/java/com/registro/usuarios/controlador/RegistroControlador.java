@@ -30,6 +30,12 @@ public class RegistroControlador {
 		modelo.addAttribute("usuarios", servicio.listarUsuarios());
 		return "index";
 	}
+    @GetMapping("/index/nuevo")
+    public String crearUsuario(Model modelo){
+        Usuario usuario = new Usuario();
+        modelo.addAttribute("usuario", usuario);
+        return "registro";
+    }
 
 	 @Autowired
     private UsuarioServicio usuarioServicio;

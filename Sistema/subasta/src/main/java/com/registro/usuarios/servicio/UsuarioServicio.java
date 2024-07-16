@@ -15,6 +15,10 @@ public interface UsuarioServicio extends UserDetailsService{
 	
 	public List<Usuario> listarUsuarios();
 
+    public Usuario obteneUsuarioporId(Long id);
+
+    public Usuario actualizarUsuario(Usuario ususario);
+    
     public Optional<Usuario> findById(Long id);
 
     public void deleteById(Long id);

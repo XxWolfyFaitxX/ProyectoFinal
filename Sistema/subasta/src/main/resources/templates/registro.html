@@ -28,7 +28,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#" th:href="@{/}">Anuncie y Subaste</a>
+				<a class="navbar-brand" href="#" th:href="@{/}">Registro de Usuarios Nuevos</a>
 			</div>
 		</div>
 	</nav>
@@ -47,25 +47,25 @@
 				<form th:action="@{/registro}" method="post" th:object="${usuario}">
 					<div class="form-group">
 						<label class="control-label" for="nombre">Nombre : </label> <input
-							id="nombre" type="text" class="form-control" th:field="*{nombre}"
+							id="nombre" type="text" class="form-control" placeholder="Digite su nombre: " th:field="*{nombre}"
 							required autofocus="autofocus">
 					</div>
 
 					<div class="form-group">
 						<label class="control-label" for="apellido">Apellido : </label> <input
-							id="apellido" class="form-control" th:field="*{apellido}"
+							id="apellido" class="form-control" placeholder="Digite su apellido: " th:field="*{apellido}"
 							required autofocus="autofocus">
 					</div>
 
 					<div class="form-group">
 						<label class="control-label" for="email">Email : </label> <input
-							id="email" type="email" class="form-control" th:field="*{email}"
+							id="email" type="email" class="form-control" placeholder="Digite su Email: " th:field="*{email}"
 							required autofocus="autofocus">
 					</div>
 
 					<div class="form-group">
 						<label class="control-label" for="password">Password : </label> <input
-							type="password" id="password" class="form-control" th:field="*{password}"
+							type="password" id="password" class="form-control" placeholder="Digite una contraseña: " th:field="*{password}"
 							required autofocus="autofocus">
 					</div>
 

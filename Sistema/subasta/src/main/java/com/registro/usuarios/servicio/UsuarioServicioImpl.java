@@ -76,7 +76,17 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 
 	@Override
 	public void deleteById(Long id) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'deleteById'");
+		usuarioRepositorio.deleteById(id);
 	}
+
+	@Override
+	public Usuario obteneUsuarioporId(Long id) {
+	return usuarioRepositorio.findById(id).get();
+	}
+
+	@Override
+	public Usuario actualizarUsuario(Usuario ususario) {
+		return usuarioRepositorio.save(ususario);
+	}
+
 }

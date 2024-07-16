@@ -43,6 +43,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests()
 		.antMatchers(
 				"/registro**",
+				"/perfil**",
 				"/js/**",
 				"/**",
 				"/index/**",
